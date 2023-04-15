@@ -1,4 +1,6 @@
 ---
+import Footer from "../components/Footer.astro";
+
 export interface Props {
 	title: string;
 }
@@ -24,9 +26,7 @@ const { title } = Astro.props;
 		<slot />
 	</body>
 
-	<footer>
-		Copyright Dev Youngstown, LLC {new Date().getFullYear().toString()}
-	</footer>
+	<Footer />
 
 	<script async defer src="https://sa.youngstown.dev/latest.js"></script>
 	<noscript
@@ -170,15 +170,6 @@ const { title } = Astro.props;
 		gap: 1em;
 	}
 
-	.specialization-card {
-		min-width: 300px;
-		max-width: 400px;
-
-		border: 2px solid white;
-		border-radius: 8px;
-		padding: 1em;
-	}
-
 	.stack-section {
 		text-align: center;
 	}
@@ -227,12 +218,5 @@ const { title } = Astro.props;
 
 	.contact-section {
 		text-align: center;
-	}
-
-	footer {
-		padding: 0.6em;
-		text-align: right;
-		color: white;
-		background-color: black;
 	}
 </style>

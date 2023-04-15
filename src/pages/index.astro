@@ -3,6 +3,7 @@ import ImageList from "../components/ImageList.astro";
 import ImageListItem from "../components/ImageListItem.astro";
 import LinkButton from "../components/LinkButton.astro";
 import Section from "../components/Section.astro";
+import SpecializationCard from "../components/SpecializationCard.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -86,25 +87,25 @@ import Layout from "../layouts/Layout.astro";
 			<h2>Specializations</h2>
 
 			<div class="specialization-cards">
-				<div class="specialization-card">
+				<SpecializationCard>
 					<h3>MVPs</h3>
 					<p>
 						Dev Youngstown's Project Managers have scoped and built
 						Minimum Viable Products (MVPs) for all kinds of
 						startups.
 					</p>
-				</div>
+				</SpecializationCard>
 
-				<div class="specialization-card">
+				<SpecializationCard>
 					<h3>Web Apps</h3>
 					<p>
 						Dev Youngstown specializes at bringing
 						highly-interactive, mobile-friendly Progressive Web Apps
 						(PWAs) to life.
 					</p>
-				</div>
+				</SpecializationCard>
 
-				<div class="specialization-card">
+				<SpecializationCard>
 					<h3>APIs</h3>
 					<p>
 						All of Dev Youngstown's projects are well-documented,
@@ -112,7 +113,7 @@ import Layout from "../layouts/Layout.astro";
 						<a href="https://12factor.net/">12 Factor methodology</a
 						>.
 					</p>
-				</div>
+				</SpecializationCard>
 			</div>
 		</Section>
 
