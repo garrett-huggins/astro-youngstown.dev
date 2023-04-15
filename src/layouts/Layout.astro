@@ -17,23 +17,255 @@ const { title } = Astro.props;
 	</head>
 
 	<body>
-		<header class="p-3 bg-purple-600 text-white text-xl font-bold">
-			Dev Youngstown
-		</header>
-
 		<slot />
-
-		<footer class="p-1 bg-black text-white text-right">
-			Copyright Dev Youngstown, LLC {new Date().getFullYear().toString()}
-		</footer>
-
-		<script async defer src="https://sa.youngstown.dev/latest.js"></script>
-		<noscript
-			><img
-				src="https://sa.youngstown.dev/noscript.gif"
-				alt=""
-				referrerpolicy="no-referrer-when-downgrade"
-			/></noscript
-		>
 	</body>
+
+	<footer>
+		Copyright Dev Youngstown, LLC {new Date().getFullYear().toString()}
+	</footer>
+
+	<script async defer src="https://sa.youngstown.dev/latest.js"></script>
+	<noscript
+		><img
+			src="https://sa.youngstown.dev/noscript.gif"
+			alt=""
+			referrerpolicy="no-referrer-when-downgrade"
+		/></noscript
+	>
 </html>
+
+<style is:global>
+	body {
+		margin: 0;
+		font-family: sans-serif;
+	}
+
+	.text-youngstown-red {
+		color: #cb333b;
+	}
+
+	a {
+		color: inherit;
+	}
+
+	h1 {
+		font-size: 3em;
+	}
+
+	h2 {
+		font-size: 2em;
+	}
+
+	h3 {
+		font-size: 1.8em;
+	}
+
+	p {
+		font-size: 1.2em;
+	}
+
+	@media screen and (min-width: 600px) {
+		h1 {
+			font-size: 4em;
+		}
+
+		h2 {
+			font-size: 2.5em;
+		}
+
+		h3 {
+			font-size: 2em;
+		}
+
+		p {
+			font-size: 1.4em;
+		}
+	}
+
+	/* lists */
+
+	.list {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		gap: 1em;
+	}
+
+	.list img {
+		max-height: 100px;
+		max-width: 100%;
+	}
+
+	@media screen and (min-width: 600px) {
+		.list {
+			flex-direction: row;
+		}
+	}
+
+	/* sections */
+
+	section {
+		padding: 2em;
+	}
+
+	.hero-section {
+		height: 700px;
+		background: rgb(150, 17, 180);
+		background: linear-gradient(
+			0deg,
+			rgba(2, 0, 36, 1) 0%,
+			rgba(150, 17, 180, 1) 80%
+		);
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		position: relative;
+
+		padding: 0;
+	}
+
+	.hero-content {
+		color: white;
+
+		padding: 2em;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-bottom: 8em;
+	}
+
+	.goal-section {
+		background-color: rgba(2, 0, 36, 1);
+		color: white;
+		text-align: center;
+	}
+
+	.goal-section-content {
+		max-width: 500px;
+
+		margin: auto;
+	}
+
+	.process-section {
+		background: rgb(150, 17, 180);
+		background: linear-gradient(
+			0deg,
+			rgba(150, 17, 180, 1) 0%,
+			rgba(2, 0, 36, 1) 80%
+		);
+
+		color: white;
+	}
+
+	.process-section-content {
+		max-width: 700px;
+
+		margin: auto;
+	}
+
+	.specialization-section {
+		text-align: center;
+
+		background: rgb(150, 17, 180);
+		background: linear-gradient(
+			0deg,
+			rgba(2, 0, 36, 1) 0%,
+			rgba(150, 17, 180, 1) 80%
+		);
+
+		color: white;
+	}
+
+	.specialization-cards {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: stretch;
+		gap: 1em;
+	}
+
+	.specialization-card {
+		min-width: 300px;
+		max-width: 400px;
+
+		border: 2px solid white;
+		border-radius: 8px;
+		padding: 1em;
+	}
+
+	.stack-section {
+		text-align: center;
+	}
+
+	.donts-section {
+		background: rgb(150, 17, 180);
+		background: linear-gradient(
+			0deg,
+			rgba(150, 17, 180, 1) 0%,
+			rgba(2, 0, 36, 1) 80%
+		);
+
+		color: white;
+	}
+
+	.donts-section-content {
+		max-width: 700px;
+
+		margin: auto;
+	}
+
+	.team-section {
+		text-align: center;
+	}
+
+	.team-members {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: stretch;
+		gap: 1em;
+	}
+
+	.team-member {
+		min-width: 300px;
+		max-width: 400px;
+
+		border: 2px solid black;
+		border-radius: 8px;
+		padding: 1em;
+	}
+
+	.friends-section {
+		text-align: center;
+	}
+
+	.contact-section {
+		text-align: center;
+	}
+
+	.button {
+		display: inline-block;
+		border: 1px solid black;
+		padding: 0.5em;
+		border-radius: 8px;
+
+		color: white;
+		background-color: black;
+		text-decoration: none;
+
+		margin: 1em;
+	}
+
+	footer {
+		padding: 0.6em;
+		text-align: right;
+		color: white;
+		background-color: black;
+	}
+</style>
