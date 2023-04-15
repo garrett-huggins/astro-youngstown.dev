@@ -1,0 +1,31 @@
+---
+export interface Props {
+	href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<a class="link-button" href={href}>
+	<slot />
+</a>
+
+<style>
+	.link-button {
+		display: inline-block;
+		border: 1px solid black;
+		padding: 0.8em;
+		border-radius: 8px;
+
+		color: white;
+		background-color: black;
+		text-decoration: none;
+
+		margin: 1em;
+	}
+
+	.link-button:hover {
+		background-color: white;
+		color: black;
+	}
+</style>
