@@ -1,0 +1,24 @@
+---
+---
+
+<ul class="image-list">
+	<slot />
+</ul>
+
+<style>
+	.image-list {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		gap: 1em;
+	}
+
+	@media screen and (min-width: 600px) {
+		.image-list {
+			flex-direction: row;
+		}
+	}
+</style>

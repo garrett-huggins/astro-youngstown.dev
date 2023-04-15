@@ -1,0 +1,29 @@
+---
+export interface Props {
+	src: string;
+	alt: string;
+	title?: string;
+	href?: string;
+}
+
+const { src, alt, title, href } = Astro.props;
+---
+
+<li class="image-list-item">
+	{
+		href ? (
+			<a title={title} href="https://astro.build" target="_blank">
+				<img alt={alt} src={src} />
+			</a>
+		) : (
+			<img alt={alt} title={title} src={src} />
+		)
+	}
+</li>
+
+<style>
+	.image-list-item img {
+		max-height: 100px;
+		max-width: 100%;
+	}
+</style>

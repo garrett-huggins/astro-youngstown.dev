@@ -1,11 +1,14 @@
 ---
+import ImageList from "../components/ImageList.astro";
+import ImageListItem from "../components/ImageListItem.astro";
 import LinkButton from "../components/LinkButton.astro";
+import Section from "../components/Section.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Dev Youngstown">
 	<main>
-		<section class="hero-section">
+		<Section className="hero-section">
 			<div class="hero-content">
 				<h1>Dev Youngstown</h1>
 
@@ -19,9 +22,9 @@ import Layout from "../layouts/Layout.astro";
 					most promising startups.
 				</h2>
 			</div>
-		</section>
+		</Section>
 
-		<section class="goal-section">
+		<Section className="goal-section">
 			<h2>Our Goal</h2>
 
 			<p class="goal-section-content">
@@ -29,9 +32,9 @@ import Layout from "../layouts/Layout.astro";
 				paid experience they need to be qualified to work remotely from
 				Youngstown, OH.
 			</p>
-		</section>
+		</Section>
 
-		<section class="process-section">
+		<Section className="process-section">
 			<div class="process-section-content">
 				<h2>Our process</h2>
 
@@ -77,9 +80,9 @@ import Layout from "../layouts/Layout.astro";
 					access to all outputs from day 1.
 				</p>
 			</div>
-		</section>
+		</Section>
 
-		<section class="specialization-section">
+		<Section className="specialization-section">
 			<h2>Specializations</h2>
 
 			<div class="specialization-cards">
@@ -111,32 +114,33 @@ import Layout from "../layouts/Layout.astro";
 					</p>
 				</div>
 			</div>
-		</section>
+		</Section>
 
-		<section class="stack-section">
+		<Section className="stack-section">
 			<h2>Our Technology Stack</h2>
 			<p>
 				We build using cutting edge technologies and a modern agile
 				software development process.
 			</p>
 
-			<ul class="list">
-				<li>
-					<img alt="GitHub logo" src="/images/GitHub-logo.png" />
-				</li>
-				<li>
-					<img alt="React logo" src="/images/React-logo.png" />
-				</li>
-				<li>
-					<img alt="NextJS logo" src="/images/NextJS-logo.png" />
-				</li>
-				<li>
-					<img alt="FastAPI logo" src="/images/FastAPI-logo.png" />
-				</li>
-			</ul>
-		</section>
+			<ImageList>
+				<ImageListItem
+					alt="GitHub logo"
+					src="/images/GitHub-logo.png"
+				/>
+				<ImageListItem alt="React logo" src="/images/React-logo.png" />
+				<ImageListItem
+					alt="NextJS logo"
+					src="/images/NextJS-logo.png"
+				/>
+				<ImageListItem
+					alt="FastAPI logo"
+					src="/images/FastAPI-logo.png"
+				/>
+			</ImageList>
+		</Section>
 
-		<section class="donts-section">
+		<Section className="donts-section">
 			<div class="donts-section-content">
 				<h2>What we don't do</h2>
 
@@ -170,9 +174,9 @@ import Layout from "../layouts/Layout.astro";
 					contractors.
 				</p>
 			</div>
-		</section>
+		</Section>
 
-		<section class="team-section">
+		<Section className="team-section">
 			<h2>Our Team</h2>
 
 			<div class="team-members">
@@ -193,28 +197,25 @@ import Layout from "../layouts/Layout.astro";
 					</p>
 				</div>
 			</div>
-		</section>
+		</Section>
 
 		<div style="width: 80%; border: 4px solid black; margin: auto"></div>
 
-		<section class="friends-section">
+		<Section className="friends-section">
 			<h2>Our Friends</h2>
 
-			<ul class="list">
-				<li>
-					<a href="https://codeyoungstown.com" target="_blank">
-						<img
-							src="/images/Code-Youngstown-logo.png"
-							alt="Code Youngstown Logo"
-						/></a
-					>
-				</li>
-			</ul>
-		</section>
+			<ImageList>
+				<ImageListItem
+					src="/images/Code-Youngstown-logo.png"
+					alt="Code Youngstown Logo"
+					href="https://codeyoungstown.com"
+				/>
+			</ImageList>
+		</Section>
 
 		<div style="width: 80%; border: 4px solid black; margin: auto"></div>
 
-		<section class="contact-section">
+		<Section className="contact-section">
 			<h2>Want to work with us?</h2>
 			<p>
 				Due to high demand, we currently exclusively work with YBI
@@ -232,6 +233,6 @@ import Layout from "../layouts/Layout.astro";
 			>
 				Summer 2023 Internship Application
 			</LinkButton>
-		</section>
+		</Section>
 	</main>
 </Layout>
