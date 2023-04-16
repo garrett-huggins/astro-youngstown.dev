@@ -1,10 +1,9 @@
 ---
+import Card from "../components/Card.astro";
 import ImageList from "../components/ImageList.astro";
 import ImageListItem from "../components/ImageListItem.astro";
 import LinkButton from "../components/LinkButton.astro";
 import Section from "../components/Section.astro";
-import SpecializationCard from "../components/SpecializationCard.astro";
-import TeamMemberCard from "../components/TeamMemberCard.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -100,33 +99,23 @@ import Layout from "../layouts/Layout.astro";
 			<h2>Specializations</h2>
 
 			<div class="specialization-cards">
-				<SpecializationCard>
-					<h3>MVPs</h3>
-					<p>
-						Dev Youngstown's Project Managers have scoped and built
-						Minimum Viable Products (MVPs) for all kinds of
-						startups.
-					</p>
-				</SpecializationCard>
+				<Card
+					name="MVPs"
+					description={"Dev Youngstown's Project Managers have scoped and built Minimum Viable Products (MVPs) for all kinds of startups."}
+					color="white"
+				/>
 
-				<SpecializationCard>
-					<h3>Web Apps</h3>
-					<p>
-						Dev Youngstown specializes at bringing
-						highly-interactive, mobile-friendly Progressive Web Apps
-						(PWAs) to life.
-					</p>
-				</SpecializationCard>
+				<Card
+					name="Web Apps"
+					description={"Dev Youngstown specializes at bringing highly-interactive, mobile-friendly Progressive Web Apps (PWAs) to life."}
+					color="white"
+				/>
 
-				<SpecializationCard>
-					<h3>APIs</h3>
-					<p>
-						All of Dev Youngstown's projects are well-documented,
-						RESTful, secure, scalable, and built according to the
-						<a href="https://12factor.net/">12 Factor methodology</a
-						>.
-					</p>
-				</SpecializationCard>
+				<Card
+					name="APIs"
+					description={"All of Dev Youngstown's projects are well-documented, RESTful, secure, scalable, and built according to the 12 Factor methodology."}
+					color="white"
+				/>
 			</div>
 		</Section>
 
@@ -203,14 +192,14 @@ import Layout from "../layouts/Layout.astro";
 			<h2>Our Team</h2>
 
 			<div class="team-members">
-				<TeamMemberCard
+				<Card
 					name="Joe Duncko"
 					title="Lead Project Manager"
 					description="Senior Frontend Engineer @ BlastPoint, Co-organizer @ Code Youngstown, Entrepreneur in Residence @ YBI"
 					src="/images/JoeDuncko2019Square.webp"
 				/>
 
-				<TeamMemberCard
+				<Card
 					name="Our Students"
 					description="Dev Youngstown's students are some of the most promising up and coming software developers in Youngstown, OH."
 				/>
