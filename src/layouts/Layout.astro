@@ -24,18 +24,18 @@ const { title } = Astro.props;
 
 	<body>
 		<slot />
+
+		<Footer />
+
+		<script async defer src="https://sa.youngstown.dev/latest.js"></script>
+		<noscript
+			><img
+				src="https://sa.youngstown.dev/noscript.gif"
+				alt=""
+				referrerpolicy="no-referrer-when-downgrade"
+			/></noscript
+		>
 	</body>
-
-	<Footer />
-
-	<script async defer src="https://sa.youngstown.dev/latest.js"></script>
-	<noscript
-		><img
-			src="https://sa.youngstown.dev/noscript.gif"
-			alt=""
-			referrerpolicy="no-referrer-when-downgrade"
-		/></noscript
-	>
 </html>
 
 <style is:global>
