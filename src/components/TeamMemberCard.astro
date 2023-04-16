@@ -1,0 +1,28 @@
+---
+export interface Props {
+	name: string;
+	description: Element | string;
+}
+
+const { name, description } = Astro.props;
+---
+
+<div class="team-member">
+	<h3>{name}</h3>
+	<p>{description}</p>
+</div>
+
+<style>
+	.team-member {
+		min-width: 300px;
+		max-width: 400px;
+
+		border: 2px solid black;
+		border-radius: 8px;
+		padding: 2em;
+	}
+
+	.team-member p {
+		margin-bottom: 0;
+	}
+</style>

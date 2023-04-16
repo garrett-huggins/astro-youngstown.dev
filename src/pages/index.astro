@@ -4,12 +4,13 @@ import ImageListItem from "../components/ImageListItem.astro";
 import LinkButton from "../components/LinkButton.astro";
 import Section from "../components/Section.astro";
 import SpecializationCard from "../components/SpecializationCard.astro";
+import TeamMemberCard from "../components/TeamMemberCard.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Dev Youngstown">
 	<main>
-		<Section className="hero-section">
+		<Section class="hero-section">
 			<div class="hero-content">
 				<h1>Dev Youngstown</h1>
 
@@ -25,7 +26,7 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</Section>
 
-		<Section className="goal-section">
+		<Section class="goal-section">
 			<h2>Our Goal</h2>
 
 			<p class="goal-section-content">
@@ -35,7 +36,7 @@ import Layout from "../layouts/Layout.astro";
 			</p>
 		</Section>
 
-		<Section className="process-section">
+		<Section class="process-section">
 			<div class="process-section-content">
 				<h2>Our process</h2>
 
@@ -95,7 +96,7 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</Section>
 
-		<Section className="specialization-section">
+		<Section class="specialization-section">
 			<h2>Specializations</h2>
 
 			<div class="specialization-cards">
@@ -129,7 +130,7 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</Section>
 
-		<Section className="stack-section">
+		<Section class="stack-section">
 			<h2>Our Technology Stack</h2>
 			<p>
 				We build using cutting edge technologies and a modern agile
@@ -153,7 +154,7 @@ import Layout from "../layouts/Layout.astro";
 			</ImageList>
 		</Section>
 
-		<Section className="donts-section">
+		<Section class="donts-section">
 			<div class="donts-section-content">
 				<h2>What we don't do</h2>
 
@@ -198,32 +199,25 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</Section>
 
-		<Section className="team-section">
+		<Section class="team-section">
 			<h2>Our Team</h2>
 
 			<div class="team-members">
-				<div class="team-member">
-					<h3>Joe Duncko</h3>
-					<p>
-						Senior Frontend Engineer @ BlastPoint,<br />
-						Co-organizer @ Code Youngstown,<br />
-						Part-Time Faculty @ YSU
-					</p>
-				</div>
+				<TeamMemberCard
+					name="Joe Duncko"
+					description="Senior Frontend Engineer @ BlastPoint, Co-organizer @ Code Youngstown, Entrepreneur in Residence @ YBI"
+				/>
 
-				<div class="team-member">
-					<h3>Our students</h3>
-					<p>
-						Dev Youngstown's students are some of the most promising
-						up and coming software developers in Youngstown, OH.
-					</p>
-				</div>
+				<TeamMemberCard
+					name="Our Students"
+					description="Dev Youngstown's students are some of the most promising up and coming software developers in Youngstown, OH."
+				/>
 			</div>
 		</Section>
 
 		<div style="width: 80%; border: 4px solid black; margin: auto"></div>
 
-		<Section className="friends-section">
+		<Section class="friends-section">
 			<h2>Our Friends</h2>
 
 			<ImageList>
@@ -237,7 +231,7 @@ import Layout from "../layouts/Layout.astro";
 
 		<div style="width: 80%; border: 4px solid black; margin: auto"></div>
 
-		<Section className="contact-section">
+		<Section class="contact-section">
 			<h2>Want to work with us?</h2>
 			<p>
 				Due to high demand, we currently exclusively work with YBI
@@ -246,15 +240,19 @@ import Layout from "../layouts/Layout.astro";
 
 			<p>Projects and Interns are accepted on a per-semester basis.</p>
 
-			<LinkButton href="https://ybi.org/evolve-application/">
-				YBI EVOLVE Application
-			</LinkButton>
+			<div>
+				<LinkButton href="https://ybi.org/evolve-application/">
+					YBI EVOLVE Application
+				</LinkButton>
+			</div>
 
-			<LinkButton
-				href="https://docs.google.com/forms/d/e/1FAIpQLSfLtS6ehMstjlN4MsD2YCN5qoCknLo_YYEOHKb7TinhnaMpBw/viewform?usp=sf_link"
-			>
-				Summer 2023 Internship Application
-			</LinkButton>
+			<div>
+				<LinkButton
+					href="https://docs.google.com/forms/d/e/1FAIpQLSfLtS6ehMstjlN4MsD2YCN5qoCknLo_YYEOHKb7TinhnaMpBw/viewform?usp=sf_link"
+				>
+					Summer 2023 Internship Application
+				</LinkButton>
+			</div>
 		</Section>
 	</main>
 </Layout>
