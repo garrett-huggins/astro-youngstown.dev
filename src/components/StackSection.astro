@@ -1,0 +1,20 @@
+---
+import ImageList from "./ImageList.astro";
+import ImageListItem from "./ImageListItem.astro";
+import Section from "./Section.astro";
+---
+
+<Section class="stack-section">
+	<h2>Our Technology Stack</h2>
+	<p>
+		We build using cutting edge technologies and a modern agile software
+		development process.
+	</p>
+
+	<ImageList>
+		<ImageListItem alt="GitHub logo" src="/images/GitHub-logo.png" />
+		<ImageListItem alt="React logo" src="/images/React-logo.png" />
+		<ImageListItem alt="NextJS logo" src="/images/NextJS-logo.png" />
+		<ImageListItem alt="FastAPI logo" src="/images/FastAPI-logo.png" />
+	</ImageList>
+</Section>

@@ -1,0 +1,48 @@
+---
+import Section from "./Section.astro";
+---
+
+<Section class="hero-section">
+	<div class="hero-content">
+		<h1 style={{ display: "none" }}>Dev Youngstown</h1>
+
+		<h2>
+			We partner <span class="text-youngstown-red">Youngstown's</span><br
+			/>
+			most promising student software developers<br />
+			with <span class="text-youngstown-red">Youngstown's</span><br />
+			most promising startups.
+		</h2>
+	</div>
+</Section>
+
+<style>
+	.hero-section {
+		height: 700px;
+		background: rgb(150, 17, 180);
+		background: linear-gradient(
+			0deg,
+			rgba(2, 0, 36, 1) 0%,
+			rgba(150, 17, 180, 1) 80%
+		);
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		position: relative;
+
+		padding: 0;
+	}
+
+	.hero-content {
+		color: white;
+
+		padding: 2em;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-bottom: 8em;
+	}
+</style>

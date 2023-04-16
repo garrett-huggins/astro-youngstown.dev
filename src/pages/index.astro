@@ -1,249 +1,39 @@
 ---
-import Card from "../components/Card.astro";
-import ImageList from "../components/ImageList.astro";
-import ImageListItem from "../components/ImageListItem.astro";
-import LinkButton from "../components/LinkButton.astro";
-import Section from "../components/Section.astro";
+import ContactSection from "../components/ContactSection.astro";
+import Divider from "../components/Divider.astro";
+import DontsSection from "../components/DontsSection.astro";
+import FriendsSection from "../components/FriendsSection.astro";
+import GoalSection from "../components/GoalSection.astro";
+import HeroSection from "../components/HeroSection.astro";
+import ProcessSection from "../components/ProcessSection.astro";
+import SpecializationSection from "../components/SpecializationSection.astro";
+import StackSection from "../components/StackSection.astro";
+import TeamSection from "../components/TeamSection.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Dev Youngstown">
 	<main>
-		<Section class="hero-section">
-			<div class="hero-content">
-				<h1 style={{ display: "none" }}>Dev Youngstown</h1>
+		<HeroSection />
 
-				<h2>
-					We partner <span class="text-youngstown-red"
-						>Youngstown's</span
-					><br />
-					most promising student software developers<br />
-					with <span class="text-youngstown-red">Youngstown's</span
-					><br />
-					most promising startups.
-				</h2>
-			</div>
-		</Section>
+		<GoalSection />
 
-		<Section class="goal-section">
-			<h2>Our Goal</h2>
+		<ProcessSection />
 
-			<p class="goal-section-content">
-				To give talented local student software developers the 1 year of
-				paid experience they need to be qualified to work remotely from
-				Youngstown, OH.
-			</p>
-		</Section>
+		<SpecializationSection />
 
-		<Section class="process-section">
-			<div class="process-section-content">
-				<h2>Our process</h2>
+		<StackSection />
 
-				<div>
-					<h3>Vet</h3>
+		<DontsSection />
 
-					<p>
-						Projects are vetted and accepted on a rolling basis
-						based on scope, student-friendliness, and project
-						flexibility.
-					</p>
-				</div>
+		<TeamSection />
 
-				<div>
-					<h3>Accept</h3>
+		<Divider />
 
-					<p>
-						Accepted projects are assigned a Project Manager - a
-						local senior software engineer who has years of
-						experience building real-world software projects for
-						companies of all sizes.
-					</p>
-				</div>
+		<FriendsSection />
 
-				<div>
-					<h3>Scope</h3>
+		<Divider />
 
-					<p>
-						Our Project Manager helps you create a well-defined
-						scope of work specifically designed to enable students
-						to be able deliver meaningful value to you and your
-						customers.
-					</p>
-				</div>
-
-				<div>
-					<h3>Match</h3>
-
-					<p>
-						We then use our connections with local organizations
-						such as Code Youngstown, YSU, and MCCTC to match your
-						project students are ready to take their experience to
-						the next level and are excited at the prospect of
-						working on a project like yours.
-					</p>
-				</div>
-
-				<div>
-					<h3>Execute</h3>
-
-					<p>
-						Students execute the work transparently - expect weekly
-						progress check-ins with your Project Manager and to have
-						access to all outputs from day 1.
-					</p>
-				</div>
-			</div>
-		</Section>
-
-		<Section class="specialization-section">
-			<h2>Specializations</h2>
-
-			<div class="specialization-cards">
-				<Card
-					name="MVPs"
-					description={"Dev Youngstown's Project Managers have scoped and built Minimum Viable Products (MVPs) for all kinds of startups."}
-					color="white"
-				/>
-
-				<Card
-					name="Web Apps"
-					description={"Dev Youngstown specializes at bringing highly-interactive, mobile-friendly Progressive Web Apps (PWAs) to life."}
-					color="white"
-				/>
-
-				<Card
-					name="APIs"
-					description={"All of Dev Youngstown's projects are well-documented, RESTful, secure, scalable, and built according to the 12 Factor methodology."}
-					color="white"
-				/>
-			</div>
-		</Section>
-
-		<Section class="stack-section">
-			<h2>Our Technology Stack</h2>
-			<p>
-				We build using cutting edge technologies and a modern agile
-				software development process.
-			</p>
-
-			<ImageList>
-				<ImageListItem
-					alt="GitHub logo"
-					src="/images/GitHub-logo.png"
-				/>
-				<ImageListItem alt="React logo" src="/images/React-logo.png" />
-				<ImageListItem
-					alt="NextJS logo"
-					src="/images/NextJS-logo.png"
-				/>
-				<ImageListItem
-					alt="FastAPI logo"
-					src="/images/FastAPI-logo.png"
-				/>
-			</ImageList>
-		</Section>
-
-		<Section class="donts-section">
-			<div class="donts-section-content">
-				<h2>What we don't do</h2>
-
-				<div>
-					<h3>Brownfields</h3>
-					<p>
-						We believe that brownfield projects (projects that
-						already exist) require a Project Manager who deeply
-						understands the existing project to effectively guide
-						and get the most out of a student. Instead we suggest
-						hiring an intern directly, which we are happy to help
-						with!
-					</p>
-				</div>
-
-				<div>
-					<h3>Give companies direct access to students</h3>
-					<p>
-						The Project Manager plays the important role of keeping
-						the project within a scope executable by the student,
-						which is an important part of making sure the project
-						output is something that you can deliver to your users.
-					</p>
-				</div>
-
-				<div>
-					<h3>Lock you in</h3>
-					<p>
-						Our projects are built to be built upon. Everything we
-						deliver is well-documented and built using the most
-						popular open source technologies on the market today.
-					</p>
-				</div>
-
-				<div>
-					<h3>Not pay our students</h3>
-					<p>
-						All of our students are paid fairly by the hour as 1099
-						contractors.
-					</p>
-				</div>
-			</div>
-		</Section>
-
-		<Section class="team-section">
-			<h2>Our Team</h2>
-
-			<div class="team-members">
-				<Card
-					name="Joe Duncko"
-					title="Lead Project Manager"
-					description="Senior Frontend Engineer @ BlastPoint, Co-organizer @ Code Youngstown, Entrepreneur in Residence @ YBI"
-					src="/images/JoeDuncko2019Square.webp"
-				/>
-
-				<Card
-					name="Our Students"
-					description="Dev Youngstown's students are some of the most promising up and coming software developers in Youngstown, OH."
-				/>
-			</div>
-		</Section>
-
-		<div style="width: 80%; border: 4px solid black; margin: auto"></div>
-
-		<Section class="friends-section">
-			<h2>Our Friends</h2>
-
-			<ImageList>
-				<ImageListItem
-					src="/images/Code-Youngstown-logo.png"
-					alt="Code Youngstown Logo"
-					href="https://codeyoungstown.com"
-				/>
-			</ImageList>
-		</Section>
-
-		<div style="width: 80%; border: 4px solid black; margin: auto"></div>
-
-		<Section class="contact-section">
-			<h2>Want to work with us?</h2>
-			<p>
-				Due to high demand, we currently exclusively work with YBI
-				Portfolio Companies through their EVOLVE program.
-			</p>
-
-			<p>Projects and Interns are accepted on a per-semester basis.</p>
-
-			<div>
-				<LinkButton href="https://ybi.org/evolve-application/">
-					YBI EVOLVE Application
-				</LinkButton>
-			</div>
-
-			<div>
-				<LinkButton
-					href="https://docs.google.com/forms/d/e/1FAIpQLSfLtS6ehMstjlN4MsD2YCN5qoCknLo_YYEOHKb7TinhnaMpBw/viewform?usp=sf_link"
-				>
-					Summer 2023 Internship Application
-				</LinkButton>
-			</div>
-		</Section>
+		<ContactSection />
 	</main>
 </Layout>
