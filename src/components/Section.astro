@@ -12,6 +12,12 @@ const { class: className } = Astro.props;
 
 <style>
 	section {
-		padding: 5em;
+		padding: 2em;
+	}
+
+	@media screen and (min-width: 600px) {
+		section {
+			padding: 5em;
+		}
 	}
 </style>
