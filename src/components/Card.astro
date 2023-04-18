@@ -11,7 +11,14 @@ const { name, title, description, src, color = "black" } = Astro.props;
 ---
 
 <div class:list={["team-member", { white: color === "white" }]}>
-	{src && <img src={src} alt={name} />}
+	{
+		src && (
+			// The extra div is needed to prevent the image from stretching
+			<div>
+				<img src={src} alt={name} />
+			</div>
+		)
+	}
 	<h3>{name}</h3>
 	{
 		title && (
